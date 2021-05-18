@@ -1,0 +1,314 @@
+:root{
+    --darkOrange: rgb(241, 103, 24);
+    --lightOrange: rgb(255, 155, 98);
+    --darkBlue: rgb(22, 37, 66);
+    --lightBlue: rgb(123, 139, 173);
+    --grey: rgb(232, 239, 242);
+    --white: rgb(255, 255, 255);
+    --headerWeight: 900;
+    --bodyWeight: 500;
+    --base: .75;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    margin:1.25rem 0;
+    padding:0 2rem;
+}
+
+#hero{
+ 
+}
+
+#hero .content{
+    margin: 0 2rem;
+}
+
+.heroHeader{
+    font-size:2.75rem;
+    line-height: 1;
+}
+
+.heroCTAContainer{
+    display:flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#hero .heroRelease{
+    margin-left: 2rem;
+}
+
+#hero .image {
+    overflow-x: hidden;
+    margin-top:2rem;
+}
+
+.heroImage{
+    width:100%;
+    height:auto;
+    margin-left:2rem;
+    border-radius: 1.25rem;
+}
+
+#heroPatternSquare{
+    display: none;
+}
+
+#additionalImagesSquare{
+    display: none;
+}
+
+#additionalImages{
+    margin-top:1.5rem;
+    display: flex;
+    gap:25px;
+    min-height: 315px;
+    margin-bottom:3rem;
+}
+
+#additionalImages > div:nth-child(1){
+    width:35%;
+    margin-left:-1.5rem;
+    background: linear-gradient(
+        rgba(241, 103, 24, .95),
+        rgba(241, 103, 24, .95)
+    ),
+    url(../assets/mobile/image-phone-and-keyboard.jpg);
+    background-size: cover;
+    background-blend-mode: multiply;
+    border-radius: 1.25rem;
+}
+
+#additionalImages > div:nth-child(2){
+    width:65%;
+    margin-right:2rem;
+    background-image: url(../assets/mobile/image-glass-and-keyboard.jpg);
+    background-size: cover;
+    border-radius: 1.25rem;
+}
+
+#bodyHeader{
+    margin:0 2rem;
+    text-align: center;
+    
+}
+
+#bodyHeader > h2 {
+    word-spacing: 9000rem;
+    font-weight: 900;
+    font-size: 2rem;
+}
+
+#iconsSection{
+    margin-top:6rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.iconContainer{
+    margin-left:1.25rem;
+    margin-right:1.25rem;
+    margin-top:2rem;
+    margin-bottom: 2rem;
+    padding:0 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    min-height: 255px;
+}
+
+.iconHeader{
+    padding: 0 3.75rem;
+}
+
+.iconSVG{
+    background: var(--darkOrange);
+    padding:1rem;
+    border-radius: 1.25rem;
+}
+
+footer{
+    margin-top:2.5rem;
+    min-height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Tablet*/
+@media (min-width:768px){
+    #hero{
+        display:flex;
+    }
+
+    #hero .content{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+    }
+
+    .heroImage{
+        margin-left: unset;
+    }
+
+    #additionalImages > div:nth-child(1){
+        margin-left:unset;
+        background: linear-gradient(
+            rgba(241, 103, 24, .95),
+            rgba(241, 103, 24, .95)
+        ),
+        url(../assets/tablet/image-phone-and-keyboard.jpg);
+        background-size: cover;
+        background-position: center center;
+    }
+
+    #additionalImages > div:nth-child(2){
+        margin-right: unset;
+        background-image: url(../assets/tablet/image-glass-and-keyboard.jpg);
+        background-size:cover;
+    }
+
+    #additionalImages{
+        margin: 1.25rem 1.25rem;
+        min-height: 315px;
+    }
+
+    #bodyHeader{
+        display:flex;
+        align-items: center;
+    }
+
+    #bodyHeader > h2 {
+        word-spacing: unset;
+        font-weight: 900;
+        font-size: 2rem;
+        margin-right:3rem;
+        text-align: left;
+    }
+
+    #bodyHeader > p {
+        text-align: left;
+    }
+
+    #iconsSection{
+        margin-top:6rem;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .iconContainer{
+        width: 40%;
+        padding: 0 4rem;
+        min-height: 200px;
+        align-items: start;
+        text-align: left;
+    }
+
+    .iconHeader{
+        padding: unset;
+    }
+}
+
+/*Desktop*/
+@media (min-width:1200px){
+    header{
+        max-width:1120px;
+        margin:1.25rem auto;
+    }
+
+    .heroFluidContainer{
+        width:100%;
+        position: relative;
+    }
+
+    #hero{
+        max-width: 1120px;
+        margin: 0 auto;
+    }
+
+    #hero .image{
+        margin-right:2rem;
+        position:relative;
+        overflow-x: visible;
+    }
+
+    /*
+    #hero::after{
+        content: '';
+        position: absolute;
+        height:125px;
+        width:125px;
+        background:url(../assets/shared/pattern-square.svg)
+    }
+    */
+
+
+
+    .heroImage{
+        position:relative;
+    }
+
+    #heroPatternSquare{
+        position: absolute;
+        display: block;
+        height:255px;
+        width:155px;
+        top:0;
+        right:-180px;
+    }
+
+
+
+
+    #additionalImages{
+        margin:2rem 0;
+        padding-left:2rem;
+        width:60%;
+        display: inline-flex;
+        position: relative;
+        min-height: 400px;
+    }
+
+    #additionalImagesSquare{
+        position:absolute;
+        display: block;
+        height:255px;
+        width:155px;
+        bottom:0;
+        left:-149px;
+    }
+
+
+
+    .contentFlexContainer{
+        max-width: 1120px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+    }
+
+    #bodyHeader{
+        display: inline-flex;
+        flex-direction: column;
+        width: 40%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #iconsSection{
+        flex-wrap: nowrap;
+        max-width:1120px;
+        margin: 1.25rem auto;
+
+    }
+    .iconContainer{
+        width: 100%;
+        padding:unset;
+    }
+}
